@@ -1,12 +1,15 @@
 import React, { useEffect } from 'react';
-import { useParams, useNavigate } from 'react-router-dom';
-import { useSelector, useDispatch } from 'react-redux';
-import { fetchProjectById } from '../store/repoSlice';
-import { Link } from 'react-router-dom';
+
 import NotFound from './NotFound';
 
-import Container from 'react-bootstrap/Container';
+import { useParams, useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
+import { useSelector, useDispatch } from 'react-redux';
+
+import { fetchProjectById } from '../store/repoSlice';
+
+import Container from 'react-bootstrap/Container';
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 
@@ -25,14 +28,8 @@ const Detail = () => {
     return <NotFound />;
   }
 
-  console.log(userName);
-  console.log('user', user);
-  console.log('params', params)
-
-
-
   return (
-    <Container >
+    <Container>
       <Card className="card" style={{ width: '20rem' }}>
         <Card.Img variant="top" src={user.avatar_url} />
         <Card.Body>
@@ -54,13 +51,15 @@ const Detail = () => {
             </div>
 
             <div className="stars">
-            <span>Местоположение: </span>
+              <span>Местоположение: </span>
               {user.location}
             </div>
           </Card.Text>
         </Card.Body>
       </Card>
-      <Button className='mt-3' onClick={() => navigate(-1)}>Назад</Button>
+      <Button className="mt-3" onClick={() => navigate(-1)}>
+        Назад
+      </Button>
     </Container>
   );
 };

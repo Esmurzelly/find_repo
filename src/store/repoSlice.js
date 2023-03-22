@@ -14,7 +14,6 @@ export const fetchRepos = createAsyncThunk(
 
       const data = await response.json();
       dispatch(getRepos(data));
-      console.log('data from repoSlice', data.items);
       return data;
     } catch (e) {
       return rejectWithValue(e.message);

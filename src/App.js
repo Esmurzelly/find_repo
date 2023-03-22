@@ -11,6 +11,7 @@ function App() {
       <Routes>
         <Route index path="/" element={<Main />} />
         <Route path="/project/:user" element={<Detail />} />
+        <Route path="*" element={<NotFound />} />
       </Routes>
     </>
   );

@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
-import CardGroup from 'react-bootstrap/CardGroup';
+import React from 'react';
 
+import CardGroup from 'react-bootstrap/CardGroup';
 import Container from 'react-bootstrap/Container';
 
 import CardInfo from './CardInfo';

@@ -1,14 +1,12 @@
 import React, { useState } from 'react';
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
-import CardGroup from 'react-bootstrap/CardGroup';
 
 import { Link } from 'react-router-dom';
 
 import Form from 'react-bootstrap/Form';
 import InputGroup from 'react-bootstrap/InputGroup';
 
-import Container from 'react-bootstrap/Container';
 import Col from 'react-bootstrap/Col';
 import Row from 'react-bootstrap/Row';
 
@@ -49,9 +47,14 @@ const CardInfo = ({ project }) => {
           <Card.Text>{project.watchers}</Card.Text>
         </Col>
       </Row>
-      <Button >
-          <Link style={{color: "white", textDecoration: 'none'}} to={`/project/${project.owner.login}}`}>Подробнее</Link>
-        </Button>
+      <Button>
+        <Link
+          style={{ color: 'white', textDecoration: 'none' }}
+          to={`/project/${project.owner.login}}`}
+        >
+          Подробнее
+        </Link>
+      </Button>
       <InputGroup className="mb-3">
         <Form.Control
           placeholder="Комментарий к проекту"
